@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24506D88-440A-4793-BA18-C2E8B71E7910}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DBMS1</RootNamespace>
+    <AssemblyName>DBMS1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\bunifu\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>..\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassConnect\AddClass.cs" />
+    <Compile Include="ClassConnect\CustomParameter.cs" />
+    <Compile Include="ClassConnect\DBConnection.cs" />
+    <Compile Include="ClassDAO\BoPhimDAO.cs" />
+    <Compile Include="ClassDAO\FnBDAO.cs" />
+    <Compile Include="ClassDAO\GheNgoiDAO.cs" />
+    <Compile Include="ClassDAO\LichChieuDAO.cs" />
+    <Compile Include="ClassDAO\VeDAO.cs" />
+    <Compile Include="Class\BoPhim.cs" />
+    <Compile Include="Class\FnB.cs" />
+    <Compile Include="Class\GheNgoi.cs" />
+    <Compile Include="Class\LichChieu.cs" />
+    <Compile Include="Class\Ve.cs" />
+    <Compile Include="FChung\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChung\FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FChung\FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChung\FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\PhongChieu.cs" />
+    <Compile Include="ClassDAO\PhongChieuDAO.cs" />
+    <Compile Include="FCRUD\FThemLichChieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCRUD\FThemLichChieu.Designer.cs">
+      <DependentUpon>FThemLichChieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTable\FBoPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTable\FBoPhim.Designer.cs">
+      <DependentUpon>FBoPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTable\FFnB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTable\FFnB.Designer.cs">
+      <DependentUpon>FFnB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTable\FGheNgoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTable\FGheNgoi.Designer.cs">
+      <DependentUpon>FGheNgoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTable\FLichChieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTable\FLichChieu.Designer.cs">
+      <DependentUpon>FLichChieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTable\FPhongChieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTable\FPhongChieu.Designer.cs">
+      <DependentUpon>FPhongChieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTable\FVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTable\FVe.Designer.cs">
+      <DependentUpon>FVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FChung\FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChung\FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCRUD\FThemLichChieu.resx">
+      <DependentUpon>FThemLichChieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTable\FBoPhim.resx">
+      <DependentUpon>FBoPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTable\FFnB.resx">
+      <DependentUpon>FFnB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTable\FGheNgoi.resx">
+      <DependentUpon>FGheNgoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTable\FLichChieu.resx">
+      <DependentUpon>FLichChieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTable\FPhongChieu.resx">
+      <DependentUpon>FPhongChieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTable\FVe.resx">
+      <DependentUpon>FVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_cinema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg_vinema.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
